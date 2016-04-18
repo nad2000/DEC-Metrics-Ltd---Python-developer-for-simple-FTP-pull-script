@@ -14,8 +14,8 @@ DEFAULT_HOST = "31.3.230.106"
 DEFAULT_POST_SCRIPT = "importfile.py"
 DEFAULT_SRC_DIR = "readings"
 DEFAULT_DST_DIR = "readings"
+DEFAULT_PATTERN = "southend_airport_20\d\d-\d\d-\d\d\.csv"
 
-filename_re = re.compile("southend_airport_20\d\d-\d\d-\d\d\.csv")
 
 ftp_user = os.environ.get("FTP_USER", DEFAULT_FTP_USER)
 ftp_pwd = os.environ.get("FTP_PWD", DEFAULT_FTP_PWD)
@@ -27,7 +27,7 @@ parser = argparse.ArgumentParser(description="Downloading and processing files f
 parser.add_argument("-u", "--user",
         help=help_str("SFTP user (default: {})", ftp_user), default=ftp_user)
 parser.add_argument("-p", "--pwd", 
-        help=help_str("SFTP user password (default: {})", ftp_pwd), default=ftp_pwd)
+        help="SFTP user password (default: ********)", default=ftp_pwd)
 parser.add_argument("--host", 
         help=help_str("SFTP host (default: {})", DEFAULT_HOST), default=DEFAULT_HOST)
 parser.add_argument("--src", 
@@ -39,6 +39,9 @@ parser.add_argument("--dst",
 parser.add_argument("-s", "--script", 
         help=help_str("Post processing script (default: {})", DEFAULT_POST_SCRIPT),
         default=DEFAULT_POST_SCRIPT)
+parser.add_argument("-P", "--pattern", 
+        help=help_str("Source file name pattern (default: {})", DEFAULT_PATTERN),
+        default=DEFAULT_PATTERN)
 args = parser.parse_args()
 
 password = args.pwd
@@ -47,6 +50,7 @@ host = args.host
 src_dir = args.src
 dst_dir = args.dst
 post_script = args.script
+filename_re = re.compile(args.pattern)
 
 port = 22
 transport = paramiko.Transport((host, port))
