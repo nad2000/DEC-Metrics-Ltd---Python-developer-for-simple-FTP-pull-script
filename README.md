@@ -27,16 +27,12 @@ Table of Contents
 ```
 . ./install.sh
 ```
-
 2. set up environment variables **FTP_USER** and **FTP_PWD** (or change the default value variable values in the script):
-
 ```
 export FTP_USER=...
 export FTP_PWD=...
 ```
-
 3. run `download.py` to download files and run a post processing script:
-
 ```
 . ./env/bin/activate
  ./download.py
