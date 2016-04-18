@@ -24,19 +24,22 @@ Table of Contents
 ## Installation and usage
 
 1. source `install.sh`:
-```
-. ./install.sh
-```
+
+    ```
+    . ./install.sh
+    ```
 2. set up environment variables **FTP_USER** and **FTP_PWD** (or change the default value variable values in the script):
-```
-export FTP_USER=...
-export FTP_PWD=...
-```
+
+    ```
+    export FTP_USER=...
+    export FTP_PWD=...
+    ```
 3. run `download.py` to download files and run a post processing script:
-```
-. ./env/bin/activate
- ./download.py
-```
+
+    ```
+    . ./env/bin/activate
+    ./download.py
+    ```
 
 ## Getting Help
 
@@ -44,19 +47,19 @@ export FTP_PWD=...
 ./download.py -h
 ```
 
->    usage: download.py [-h] [-u USER] [-p PWD] [--host HOST] [--src SRC]
->                       [--dst DST] [-s SCRIPT]
->    
->    Downloading and processing files from a SFTP server.
->    
->    optional arguments:
->      -h, --help            show this help message and exit
->      -u USER, --user USER  SFTP user (default: decmetrics)
->      -p PWD, --pwd PWD     SFTP user password (default: *********)
->      --host HOST           SFTP host (default: 31.3.230.106)
->      --src SRC             SFTP source directory (default: readings)
->      --dst DST             Destination directory (default: readings)
->      -s SCRIPT, --script SCRIPT
->                            Post processing script (default: importfile.py)
+//    usage: download.py [-h] [-u USER] [-p PWD] [--host HOST] [--src SRC]
+//                       [--dst DST] [-s SCRIPT]
+//    
+//    Downloading and processing files from a SFTP server.
+//    
+//    optional arguments:
+//      -h, --help            show this help message and exit
+//      -u USER, --user USER  SFTP user (default: decmetrics)
+//      -p PWD, --pwd PWD     SFTP user password (default: *********)
+//      --host HOST           SFTP host (default: 31.3.230.106)
+//      --src SRC             SFTP source directory (default: readings)
+//      --dst DST             Destination directory (default: readings)
+//      -s SCRIPT, --script SCRIPT
+//                            Post processing script (default: importfile.py)
 
 
