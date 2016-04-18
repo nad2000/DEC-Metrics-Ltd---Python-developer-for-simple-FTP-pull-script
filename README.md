@@ -49,7 +49,7 @@ Table of Contents
 
 ```
 usage: download.py [-h] [-u USER] [-p PWD] [--host HOST] [--src SRC]
-                   [--dst DST] [-s SCRIPT] [-P PATTERN]
+                   [--dst DST] [-s SCRIPT] [-P PREFIX]
 
 Downloading and processing files from a SFTP server.
 
@@ -61,8 +61,7 @@ optional arguments:
   --src SRC             SFTP source directory (default: readings)
   --dst DST             Destination directory (default: readings)
   -s SCRIPT, --script SCRIPT
-                        Post processing script (default: importfile.py)
-  -P PATTERN, --pattern PATTERN
-                        Source file name pattern (default:
-                        southend_airport_20\d\d-\d\d-\d\d\.csv)
+                        Post processing script (default: ./importfile.py)
+  -P PREFIX, --prefix PREFIX
+                        Source file name prefix (default: southend_airport)
 ```
