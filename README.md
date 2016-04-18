@@ -47,19 +47,19 @@ Table of Contents
 ./download.py -h
 ```
 
-//    usage: download.py [-h] [-u USER] [-p PWD] [--host HOST] [--src SRC]
-//                       [--dst DST] [-s SCRIPT]
-//    
-//    Downloading and processing files from a SFTP server.
-//    
-//    optional arguments:
-//      -h, --help            show this help message and exit
-//      -u USER, --user USER  SFTP user (default: decmetrics)
-//      -p PWD, --pwd PWD     SFTP user password (default: *********)
-//      --host HOST           SFTP host (default: 31.3.230.106)
-//      --src SRC             SFTP source directory (default: readings)
-//      --dst DST             Destination directory (default: readings)
-//      -s SCRIPT, --script SCRIPT
-//                            Post processing script (default: importfile.py)
-
-
+```
+    usage: download.py [-h] [-u USER] [-p PWD] [--host HOST] [--src SRC]
+                       [--dst DST] [-s SCRIPT]
+    
+    Downloading and processing files from a SFTP server.
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      -u USER, --user USER  SFTP user (default: decmetrics)
+      -p PWD, --pwd PWD     SFTP user password (default: *********)
+      --host HOST           SFTP host (default: 31.3.230.106)
+      --src SRC             SFTP source directory (default: readings)
+      --dst DST             Destination directory (default: readings)
+      -s SCRIPT, --script SCRIPT
+                            Post processing script (default: importfile.py)
+```
