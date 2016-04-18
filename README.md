@@ -23,7 +23,7 @@ Table of Contents
 
 ## Installation and usage
 
-1. source `intall.sh`:
+1. source `install.sh`:
 ```
 . ./install.sh
 ```
@@ -35,29 +35,32 @@ export FTP_USER=...
 export FTP_PWD=...
 ```
 
-3. run `download.py` to download ZIP file:
+3. run `download.py` to download files and run a post processing script:
 
 ```
+. ./env/bin/activate
  ./download.py
 ```
 
-4 to download XLS workbooks:
+## Getting Help
 
 ```
- ./download_xls.py
+./download.py -h
 ```
 
-## Usage with MS Windows
+>    usage: download.py [-h] [-u USER] [-p PWD] [--host HOST] [--src SRC]
+>                       [--dst DST] [-s SCRIPT]
+>    
+>    Downloading and processing files from a SFTP server.
+>    
+>    optional arguments:
+>      -h, --help            show this help message and exit
+>      -u USER, --user USER  SFTP user (default: decmetrics)
+>      -p PWD, --pwd PWD     SFTP user password (default: *********)
+>      --host HOST           SFTP host (default: 31.3.230.106)
+>      --src SRC             SFTP source directory (default: readings)
+>      --dst DST             Destination directory (default: readings)
+>      -s SCRIPT, --script SCRIPT
+>                            Post processing script (default: importfile.py)
 
-1. set up environment variables **IEA_USER** and **IEA_PWD** (or change the default value variable values in the script):
 
-```
-set IEA_USER=...
-set IEA_PWD=...
-```
-
-2. run `download.py`:
-
-```
-python3 ./download.py
-```
